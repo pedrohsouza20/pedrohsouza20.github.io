@@ -1,0 +1,33 @@
+@import url("https://use.typekit.net/doe0hto.css");
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*a9a9a9*/
+
+body {
+    background: #f1f1f1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #191919;
+    .header-medias {
+        background-color: red;
+    }
+}
+
+* {
+    font-family: "acumin-pro";
+}
+
+/*
+
+font-family: "acumin-pro", sans-serif;
+font-weight: 400;
+font-style: normal;
+ 400 & 700
+*/
