@@ -14,14 +14,26 @@
     display: flex;
     list-style-type: none;
     li {
-      margin: 0 12px;
+      margin: 0 12px 0 0;
       font-size: 17px;
       font-weight: bold;
     }
     a {
       text-decoration: none;
       color: #fff;
+      &.navbar-link {
+        &:hover {
+          transition: 0.4s;
+          color: #004594;
+        }
+        &:not(:hover) {
+          transition: 0.4s;
+        }
+      }
     }
+  }
+  h2 {
+    color: #004594;
   }
   .header-medias {
     display: flex;

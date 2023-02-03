@@ -3,5 +3,34 @@
     <h1>Projects</h1>
     <h4>Here's some of my favorite & best projects</h4>
   </div>
-  <div *ngFor="let project of projects">{{ project.title }}</div>
+  <div class="projects-list">
+    <div class="project" *ngFor="let project of projects">
+      <h2 class="project-title">
+        {{ project.title }}
+      </h2>
+      <img
+        class="project-image"
+        src="./../../../assets/images/{{ project.imagePathName }}"
+        alt=""
+      />
+      <div class="project-description">
+        <p>
+          {{ project.description }}
+        </p>
+        <span class="technologies-list"
+          >* Technologies used:
+
+          <span
+            *ngFor="
+              let tech of project.technologies;
+              index as i;
+              let last = last
+            "
+          >
+            {{ tech }}<span *ngIf="!last">,</span>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
 </div>

@@ -4,15 +4,57 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5em;
     h1 {
       margin-top: 1em;
       font-size: 2.7em;
+      color: #004594;
     }
     h4 {
       margin-top: 0.4em;
       font-family: arial !important;
       font-size: 1.25em;
       font-weight: 200;
+    }
+  }
+  .projects-list {
+    padding: 0 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    grid-gap: 60px;
+    padding-bottom: 6em;
+    .project {
+      width: 100%;
+      max-width: 40%;
+      cursor: pointer;
+      &:hover {
+        transition: 0.4s;
+        opacity: 0.6;
+      }
+      &:not(:hover) {
+        transition: 0.4s;
+      }
+      h2 {
+        color: #004594;
+        text-align: center;
+        padding: 0.3em 0;
+        background: #191919;
+        border-radius: 0.4em 0.4em 0 0;
+      }
+      img {
+        max-width: 100%;
+      }
+      p {
+        color: #fff;
+      }
+    }
+    span.technologies-list {
+      display: block;
+      margin-top: 1em;
+      font-style: italic;
+      color: #fff;
     }
   }
 }
