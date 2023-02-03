@@ -65,6 +65,11 @@ body {
   color: #fff;
 }
 
+.main {
+  padding-top: 70px;
+  background-color: #212121;
+}
+
 * {
   font-family: "acumin-pro";
 }
