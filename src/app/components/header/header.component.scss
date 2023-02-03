@@ -1,0 +1,37 @@
+.header {
+  width: 100%;
+  padding: 0 1.8em;
+  box-sizing: border-box;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr 140px 1fr;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #191919;
+  height: 70px;
+  color: #ffffff;
+  ul {
+    display: flex;
+    list-style-type: none;
+    li {
+      margin: 0 12px;
+      font-size: 17px;
+      font-weight: bold;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+  .header-medias {
+    display: flex;
+    justify-content: flex-end;
+    a {
+      margin-left: 0.8em;
+      ion-icon {
+        font-size: 30px;
+        color: #fff;
+      }
+    }
+  }
+}
