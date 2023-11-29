@@ -2,11 +2,13 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import HeaderComponent from './components/HeaderComponent.vue';
+import PresentationComponent from './components/PresentationComponent.vue';
 
 </script>
 
 <template>
   <HeaderComponent />
+  <PresentationComponent />
   <RouterView />
 </template>
 

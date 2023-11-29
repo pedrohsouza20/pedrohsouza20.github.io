@@ -6,10 +6,10 @@
     <div class="size-limiter">
       <nav>
         <ul>
-          <li><a href="#">Projetos</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Contato</a></li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#contact">Contato</a></li>
         </ul>
       </nav>
       <aside>
@@ -37,10 +37,11 @@ header {
 }
 
 .size-limiter {
-  width: 1300px;
+  width: 1000px;
+  padding: 0 60px;
   height: 60px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
