@@ -1,30 +1,46 @@
 <script setup lang="ts">
-import ProjectComponent from './ProjectComponent.vue';
+import CardComponent from './CardComponent.vue';
+
 interface ISkills {
-  imgSrc: string,
   title: string,
+  color: string,
   description: string,
-  repositoryUrl: string,
-  languages: string
+  icon?: string
 }
 
-let skills: ISkills[] = [];
-
-skills = [
+let skills: ISkills[] = [
+  {
+    title: 'Front-end',
+    color: 'pink',
+    description: 'Angular 2+, Vue.js 3, VueX, TypeScript, SCSS, VueX, Pinia'
+  },
+  {
+    title: 'Back-end',
+    color: 'purple',
+    description: 'Node.js, Adonis.js, Express, MySQL'
+  },
+  {
+    title: 'Design',
+    color: 'green',
+    description: 'UI, Heurísticas, Tipografia, Cores'
+  },
+  {
+    title: 'Soft-skills',
+    color: 'orange',
+    description: 'Dedicado, Apaixonado por aprender, Amante do auto-didatismo'
+  },
 ]
-
 </script>
 
 <template>
-  <section class="projects" id="projects">
+  <section class="skills" id="skills">
     <div class="container">
       <h2 class="title">
-        Projetos
+        Skills
       </h2>
-      <ul class="projects-list">
-        <li v-for="project in projects">
-          <ProjectComponent :imgSrc=project.imgSrc :description=project.description :repositoryUrl=project.repositoryUrl
-            :title=project.title :languages=project.languages />
+      <ul class="skills-list">
+        <li v-for="skill in skills">
+          <CardComponent :title=skill.title :color=skill.color :description=skill.description :icon=skill.icon />
         </li>
       </ul>
     </div>
@@ -36,7 +52,7 @@ section .container {
   width: 1000px;
 }
 
-section.presentation {
+section.skills {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -63,7 +79,7 @@ h1 {
   font-family: Arial, sans-serif
 }
 
-.projects-list {
+.skills-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

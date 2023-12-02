@@ -4,6 +4,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import HeaderComponent from './components/HeaderComponent.vue';
 import PresentationComponent from './components/PresentationComponent.vue';
 import ProjectsComponent from './components/ProjectsComponent.vue';
+import SkillsComponent from './components/SkillsComponent.vue';
 
 </script>
 
@@ -11,6 +12,7 @@ import ProjectsComponent from './components/ProjectsComponent.vue';
   <HeaderComponent />
   <PresentationComponent />
   <ProjectsComponent />
+  <SkillsComponent />
   <RouterView />
 </template>
 

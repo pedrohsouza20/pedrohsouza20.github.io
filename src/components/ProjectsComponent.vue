@@ -57,17 +57,6 @@ section .container {
   width: 1000px;
 }
 
-section.presentation {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-section.presentation article {
-  width: 1000px;
-  display: flex;
-}
-
 article {
   margin-top: 3em;
 }
@@ -103,23 +92,5 @@ p {
   position: absolute;
 }
 
-.presentation-photo {
-  position: relative;
-  left: calc(100% - 372px);
-  align-self: flex-end;
-}
-
-button {
-  user-select: none;
-  margin-top: 22px;
-  background-color: #AD14BA;
-  width: 170px;
-  height: 35px;
-  border: none;
-  font-family: 'Inter', sans-serif;
-  color: #fff;
-  cursor: pointer;
-  font-weight: bold;
-}
 </style>
 

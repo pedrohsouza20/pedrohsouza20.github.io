@@ -34,7 +34,6 @@ article{
 }
 
 h1 {
-  margin-top: 1.75em;
   font-size: 2.25em;
   max-width: 370px;
   color: #fff;
