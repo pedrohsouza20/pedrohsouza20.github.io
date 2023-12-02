@@ -10,6 +10,7 @@
 <style scoped>
 footer {
   width: 100%;
+  margin-top: 3em;
   text-align: center;
   box-sizing: border-box;
   padding: 1em;

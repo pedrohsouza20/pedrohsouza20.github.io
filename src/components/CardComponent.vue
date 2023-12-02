@@ -6,6 +6,7 @@ defineProps<{
   icon?: string
   personName?: string,
   profission?: string
+  urlToGo?: string
 }>()
 </script>
 
@@ -26,12 +27,14 @@ defineProps<{
   </div>
 
   <div v-if="icon">
-    <article :class='`color-${color}`' class="card-item  is-flex">
+    <a :href=urlToGo>
+      <article :class='`color-${color}`' class="card-item  is-flex">
       <p class="description">
         {{ description }}
       </p>
       <div :class=color class="positioning"><img class="img-icon" :src=icon alt=""></div>
     </article>
+    </a>
   </div>
 </template>
 
@@ -59,7 +62,7 @@ article.is-flex {
   position: relative;
 }
 
-article.is-flex .positioning{
+article.is-flex .positioning {
   width: 90px;
   height: 100%;
   display: flex;
@@ -81,12 +84,15 @@ article.is-flex .positioning{
 div.pink {
   background: #AD14BA;
 }
+
 div.purple {
   background: #6C0BF6;
 }
+
 div.green {
   background: #14BA56;
 }
+
 div.orange {
   background: #E36823;
 }
