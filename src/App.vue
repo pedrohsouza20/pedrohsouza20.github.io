@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 import HeaderComponent from './components/HeaderComponent.vue';
 import PresentationComponent from './components/PresentationComponent.vue';
 import ProjectsComponent from './components/ProjectsComponent.vue';
 import SkillsComponent from './components/SkillsComponent.vue';
-import Testimonies from './components/TestimoniesComponent.vue';
+import TestimoniesComponent from './components/TestimoniesComponent.vue';
+import ContactComponent from './components/ContactComponent.vue';
+import FooterComponent from './components/FooterComponent.vue';
 
 </script>
 
@@ -14,7 +15,9 @@ import Testimonies from './components/TestimoniesComponent.vue';
   <PresentationComponent />
   <ProjectsComponent />
   <SkillsComponent />
-  <Testimonies />
+  <TestimoniesComponent />
+  <ContactComponent />
+  <FooterComponent />
   <RouterView />
 </template>
 

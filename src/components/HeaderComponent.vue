@@ -29,9 +29,13 @@
 <style scoped>
 header {
   user-select: none;
+  position: fixed;
+  top: 0%;
+  z-index: 10;
   width: 100%;
   height: 60px;
   display: flex;
+  background-color: #0E151E;
   justify-content: center;
   font-family: 'Inter', sans-serif;
 }

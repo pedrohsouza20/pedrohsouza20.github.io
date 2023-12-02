@@ -10,18 +10,29 @@ defineProps<{
 </script>
 
 <template>
-  <h3>
-    {{ title }}
-  </h3>
-  <article  :class='`color-${color}`' class="card-item">
-    <p class="description">
-      {{ description }}
-    <p :class="`${color}`" v-if="personName">
+  <div v-if="!icon">
+    <h3>
+      {{ title }}
+    </h3>
+    <article :class='`color-${color}`' class="card-item">
+      <p class="description">
+        {{ description }}
+      <p :class="`${color}`" v-if="personName">
       <p :class="`${color}`" class="person-name">- {{ personName }},</p>
       <span :class="`${color}`"> {{ profission }}</span>
-    </p>
-    </p>
-  </article>
+      </p>
+      </p>
+    </article>
+  </div>
+
+  <div v-if="icon">
+    <article :class='`color-${color}`' class="card-item  is-flex">
+      <p class="description">
+        {{ description }}
+      </p>
+      <div :class=color class="positioning"><img class="img-icon" :src=icon alt=""></div>
+    </article>
+  </div>
 </template>
 
 <style scoped>
@@ -33,17 +44,70 @@ article {
   justify-content: center;
 }
 
-p.purple, span.purple {
+p.is-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+p.is-flex .description {
+  display: block;
+  max-width: max-content !important;
+}
+
+article.is-flex {
+  position: relative;
+}
+
+article.is-flex .positioning{
+  width: 90px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0%;
+  position: absolute;
+}
+
+.img-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.card-item {
+  margin-top: 2em;
+}
+
+div.pink {
+  background: #AD14BA;
+}
+div.purple {
+  background: #6C0BF6;
+}
+div.green {
+  background: #14BA56;
+}
+div.orange {
+  background: #E36823;
+}
+
+p.purple,
+span.purple {
   color: #6C0BF6 !important;
 }
 
-p.pink, span.pink {
+p.pink,
+span.pink {
   color: #AD14BA
 }
-p.green, span.green {
+
+p.green,
+span.green {
   color: #14BA56
 }
-p.orange, span.orange {
+
+p.orange,
+span.orange {
   color: #E36823
 }
 
@@ -51,7 +115,7 @@ p.orange, span.orange {
   margin-top: 1.6em;
 }
 
-article{
+article {
   box-sizing: border-box;
   background: #0E151E;
   min-height: 90px;
