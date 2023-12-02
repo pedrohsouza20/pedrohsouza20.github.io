@@ -1,19 +1,25 @@
 <script setup lang="ts">
 defineProps<{
-  title: string,
+  title?: string,
   color: string,
   description: string
   icon?: string
+  personName?: string,
+  profission?: string
 }>()
 </script>
 
 <template>
-  <article class="skill-item">
-    <h3>
-      {{ title }}
-    </h3>
-    <p :class='`color-${color}`'>
+  <h3>
+    {{ title }}
+  </h3>
+  <article  :class='`color-${color}`' class="card-item">
+    <p class="description">
       {{ description }}
+    <p :class="`${color}`" v-if="personName">
+      <p :class="`${color}`" class="person-name">- {{ personName }},</p>
+      <span :class="`${color}`"> {{ profission }}</span>
+    </p>
     </p>
   </article>
 </template>
@@ -22,17 +28,38 @@ defineProps<{
 article {
   max-width: 100%;
   width: 470px;
-}
-article p {
-  background: #0E151E;
-  border-left: 9px solid red;
-  min-height: 70px;
-  padding: 1em;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
-article h3 {
+p.purple, span.purple {
+  color: #6C0BF6 !important;
+}
+
+p.pink, span.pink {
+  color: #AD14BA
+}
+p.green, span.green {
+  color: #14BA56
+}
+p.orange, span.orange {
+  color: #E36823
+}
+
+.person-name {
+  margin-top: 1.6em;
+}
+
+article{
+  box-sizing: border-box;
+  background: #0E151E;
+  min-height: 90px;
+  padding: 1em;
+}
+
+h3 {
+  margin-top: 1.6em;
   font-size: 22px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
@@ -43,19 +70,19 @@ p {
   font-size: 1em;
 }
 
-p.color-pink {
+article.color-pink {
   border-left: 9px solid #AD14BA;
 }
 
-p.color-purple {
+article.color-purple {
   border-left: 9px solid #6C0BF6;
 }
 
-p.color-green {
+article.color-green {
   border-left: 9px solid #14BA56;
 }
 
-p.color-orange {
+article.color-orange {
   border-left: 9px solid #E36823;
 }
 </style>
