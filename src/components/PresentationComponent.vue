@@ -19,10 +19,6 @@
 <style scoped>
 section.presentation {
   box-sizing: border-box;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 0 60px;
 }
 
 section.presentation article {

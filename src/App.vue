@@ -3,12 +3,14 @@ import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import HeaderComponent from './components/HeaderComponent.vue';
 import PresentationComponent from './components/PresentationComponent.vue';
+import ProjectsComponent from './components/ProjectsComponent.vue';
 
 </script>
 
 <template>
   <HeaderComponent />
   <PresentationComponent />
+  <ProjectsComponent />
   <RouterView />
 </template>
 
