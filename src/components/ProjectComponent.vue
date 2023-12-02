@@ -26,7 +26,7 @@ article {
   flex-direction: column;
   width: 320px;
   max-width: 100%;
-  min-height: 500px;
+  min-height: 300px;
   padding: 1.2em;
   box-sizing: border-box;
   border-radius: 12px;
@@ -44,7 +44,7 @@ article {
 }
 
 .project-languages{
-height: 40px;
+height: 20px;
 }
 
 p {

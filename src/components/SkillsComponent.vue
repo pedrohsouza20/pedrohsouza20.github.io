@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import ProjectComponent from './ProjectComponent.vue';
-interface IProject {
+interface ISkills {
   imgSrc: string,
   title: string,
   description: string,
@@ -8,30 +8,9 @@ interface IProject {
   languages: string
 }
 
-let projects: IProject[] = [];
+let skills: ISkills[] = [];
 
-projects = [
-  {
-    imgSrc: './../src/assets/images/thumbnails-projects/parachAdvent.jpg',
-    title: 'ParachAdvent',
-    description: 'Landing page de Marketing para a ParachAdvent, escola de paraquedismo.',
-    repositoryUrl: '',
-    languages: ' Vue.js, SCSS, JavaScript'
-  },
-  {
-    imgSrc: './../src/assets/images/thumbnails-projects/parachAdvent.jpg',
-    title: 'Ask and Answers',
-    description: 'Um site de perguntas e respostas, ao melhor estilo Yahoo!',
-    repositoryUrl: '',
-    languages: ' Node.js, Express.js, MySQL, Sequelize, EJS'
-  },
-  {
-    imgSrc: './../src/assets/images/thumbnails-projects/parachAdvent.jpg',
-    title: 'Blog',
-    description: 'Um blog onde o administrador pode fazer vários posts',
-    repositoryUrl: '',
-    languages: ' Node.js, Express.js, MySQL, Sequelize, EJS'
-  }
+skills = [
 ]
 
 </script>
