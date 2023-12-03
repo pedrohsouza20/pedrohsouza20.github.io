@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ButtonComponent from './ButtonComponent.vue';
 </script>
 
 <template>
@@ -9,7 +10,11 @@
         <p>Aficionado por tecnologia e verdadeiro entusiasta do que faço,
           estou em constante evolução em busca do meu sucesso
           profissional e pessoal.</p>
-          <button>DOWNLOAD CV</button>
+          <ButtonComponent
+          :targetType="'_blank'"
+          :linkTo="'https://drive.google.com/file/d/12aWEO-HnFc6Sz_rUWZYjSxUJCqv4a7_U/view?usp=drive_link'"
+          :text="'Download CV'"
+          />
       </div>
       <img class="presentation-photo" src="./../assets/images/presentation-photo.png" alt="">
     </article>
