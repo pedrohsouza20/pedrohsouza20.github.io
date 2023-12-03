@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import ButtonComponent from './ButtonComponent.vue';
+
 defineProps<{
   imgSrc: string,
   title: string,
   description: string,
-  repositoryUrl: string
+  repository: string,
   languages: string
 }>()
 </script>
@@ -14,9 +16,11 @@ defineProps<{
     <h3 class="project-title">{{ title }}</h3>
     <p class="project-description">{{ description }}</p>
     <span class="project-languages">{{ languages }}</span>
-    <button>
-      VER REPOSITÓRIO
-    </button>
+    <ButtonComponent
+    :targetType="'_blank'"
+    :linkGo=repository
+    :text="'Ver Repositório'"
+    />
   </article>
 </template>
 
@@ -43,8 +47,8 @@ article {
   height: 80px;
 }
 
-.project-languages{
-height: 20px;
+.project-languages {
+  height: 20px;
 }
 
 p {

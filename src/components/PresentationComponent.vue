@@ -12,7 +12,7 @@ import ButtonComponent from './ButtonComponent.vue';
           profissional e pessoal.</p>
           <ButtonComponent
           :targetType="'_blank'"
-          :linkTo="'https://drive.google.com/file/d/12aWEO-HnFc6Sz_rUWZYjSxUJCqv4a7_U/view?usp=drive_link'"
+          :linkGo="'https://drive.google.com/file/d/12aWEO-HnFc6Sz_rUWZYjSxUJCqv4a7_U/view?usp=drive_link'"
           :text="'Download CV'"
           />
       </div>

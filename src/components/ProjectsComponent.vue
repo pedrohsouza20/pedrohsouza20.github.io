@@ -4,7 +4,7 @@ interface IProject {
   imgSrc: string,
   title: string,
   description: string,
-  repositoryUrl: string,
+  repository: string,
   languages: string
 }
 
@@ -15,21 +15,21 @@ projects = [
     imgSrc: './../src/assets/images/thumbnails-projects/parachAdvent.jpg',
     title: 'ParachAdvent',
     description: 'Landing page de Marketing para a ParachAdvent, escola de paraquedismo.',
-    repositoryUrl: '',
+    repository: 'https://github.com/pedrohsouza20/parachAdvent',
     languages: ' Vue.js, SCSS, JavaScript'
   },
   {
     imgSrc: './../src/assets/images/thumbnails-projects/parachAdvent.jpg',
     title: 'Ask and Answers',
     description: 'Um site de perguntas e respostas, ao melhor estilo Yahoo!',
-    repositoryUrl: '',
+    repository: 'https://github.com/pedrohsouza20/Ask-Answers',
     languages: ' Node.js, Express.js, MySQL, Sequelize, EJS'
   },
   {
     imgSrc: './../src/assets/images/thumbnails-projects/parachAdvent.jpg',
     title: 'Blog',
     description: 'Um blog onde o administrador pode fazer vários posts',
-    repositoryUrl: '',
+    repository: 'https://github.com/pedrohsouza20/Blog',
     languages: ' Node.js, Express.js, MySQL, Sequelize, EJS'
   }
 ]
@@ -44,7 +44,7 @@ projects = [
       </h2>
       <ul class="projects-list">
         <li v-for="project in projects">
-          <ProjectComponent :imgSrc=project.imgSrc :description=project.description :repositoryUrl=project.repositoryUrl
+          <ProjectComponent :imgSrc=project.imgSrc :description=project.description :repository=project.repository
             :title=project.title :languages=project.languages />
         </li>
       </ul>

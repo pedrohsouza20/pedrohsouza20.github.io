@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  linkTo?: string,
+  linkGo: string,
   text: string,
   targetType?: string,
   backgroundColor?: string
@@ -8,8 +8,8 @@ defineProps<{
 </script>
 
 <template>
-  <div v-if="linkTo">
-    <a v-if="targetType === '_blank'" :href=linkTo target="_blank">
+  <div v-if="linkGo">
+    <a v-if="targetType === '_blank'" :href=linkGo target="_blank">
       <button>{{ text }}</button>
     </a>
     <a v-else>
